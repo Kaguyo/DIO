@@ -16,7 +16,7 @@ public class AnatomiaClasses1 {
         String primeiroNome = "Faca";
         String segundoNome = "AK47";
         // ---------------
-        // Aula 3
+        // Aula 4
         int variavel1 = 1;
          // ---------------
         String armaLendaria = armaLendaria (primeiroNome,segundoNome,variavel1);
@@ -27,7 +27,7 @@ public class AnatomiaClasses1 {
     public static String armaLendaria (String primeiroNome, String segundoNome, int variavel1)
     {
         // ---------------
-        // Aula 3
+        // Aula 4
         if (variavel1 == 1) {
             System.out.println("é um.");
         }
