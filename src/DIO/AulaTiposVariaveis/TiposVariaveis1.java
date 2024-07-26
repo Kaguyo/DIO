@@ -27,7 +27,7 @@ public class TiposVariaveis1 {
         
             // Aula do Fujita 
             String name =  "abc";
-            String password = "1234";
+            String password = "123";
             if (name != "abc" || password != "123"){throw new Exception("Usuario ou senha incorretos");}
             // AULÃO FUJITA if (name != "abc" || password != "123"){throw new ArithmeticException("Usuario ou senha incorretos");}
     }
