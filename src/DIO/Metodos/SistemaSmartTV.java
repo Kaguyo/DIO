@@ -23,7 +23,7 @@ public class SistemaSmartTV {
         }
     }
 
-    // Método para "limpar" o console simulando com várias linhas em branco
+    // Mtodo para "limpar" o console simulando com várias linhas em branco
     public static void limparConsole() {
         for (int i = 0; i < 50; ++i) System.out.println(); // Imprime 50 linhas em branco
     }

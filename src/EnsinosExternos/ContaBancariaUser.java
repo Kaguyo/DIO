@@ -10,7 +10,7 @@ public class ContaBancariaUser {
         double limiteDiario = scanner.nextDouble();
         double limiteRestante = limiteDiario;
 
-        for (;;) {
+        while (true) {
             double valorSaque = scanner.nextDouble();
 
             if (valorSaque == 0) {

@@ -16,6 +16,4 @@ public class ViaCepResponse {
     public String getLocalidade() { return localidade; }
 
     public void setLocalidade(String localidade) { this.localidade = localidade; }
-
-    @Override
 }
