@@ -1,12 +1,15 @@
 package dio;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import static dio.persistence.config.ConnectionConfig.getConnection;
 
-@SpringBootApplication
+import java.sql.SQLException;
+import dio.persistence.migration.MigrationStrategy;
+
+
 public class Main {
-	public static void main(String[] args) {
-		SpringApplication.run(Main.class, args);
-		
+	public static void main(String[] args) throws SQLException {
+		try (var connection = getConnection()){
+			new MigrationStrategy(connection).executeMigration();
+		}
 	}
 }
