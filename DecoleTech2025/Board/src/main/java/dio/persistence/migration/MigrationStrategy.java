@@ -16,7 +16,7 @@ import liquibase.database.jvm.JdbcConnection;
 import static dio.persistence.config.ConnectionConfig.getConnection;
 @AllArgsConstructor
 public class MigrationStrategy {
-    private final Connection connection;
+    public final Connection connection;
     
     public void executeMigration(){
         var originalOut = System.out;
@@ -30,7 +30,7 @@ public class MigrationStrategy {
                     var jdbcConnection = new JdbcConnection(connection);
                 ) {
                     try (var liquibase = new Liquibase(
-                    "db/changelog/db.changelog-master.yml",
+                    "db/changelog/db.changelog-master.sql",
                     new ClassLoaderResourceAccessor(),
                     jdbcConnection)) {
                         liquibase.update();

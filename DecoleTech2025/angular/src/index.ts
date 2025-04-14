@@ -1,13 +1,17 @@
-function SelectCharacterByIndex(index:number | string):string {
-    let character:string = "";
-    if (index == 1 || index == "1")
-        character = "Ellie";
-    else if (index == 2 || index == "2")
-        character = "Joel";
-    else if (index == 3 || index == "3")
-        character = "Tommy";
+function apiVersion(version : string) {
+    return (target: any) => {
+        Object.assign(target.prototype, { __version: version});
+        console.log(Object.getPrototypeOf(target.prototype));
+    };
     
-    return character;
 }
 
-console.log(SelectCharacterByIndex(2));
+@apiVersion("1.0.0")
+class Api {
+    name: string = "api";
+    version: string = "1.0.0";
+}
+
+const api = new Api();
+console.log(Reflect.ownKeys(api));
+console.log(Object.getOwnPropertyNames(api));
