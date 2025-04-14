@@ -1,2 +1,1 @@
-# Projeto Inicial na DIO
-## Primeiros passos em java/sintaxe etc...
+# Repositorio para aplicar estudos feitos na Digital Innovation One (DIO)
