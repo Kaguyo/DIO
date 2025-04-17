@@ -14,7 +14,7 @@ public class CardDAO {
     }
 
     public void criarCard(Card card) throws SQLException {
-        String sql = "INSERT INTO CARDS (nome, descricao, status, bloqueado, board_id) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO CARDS (name, description, status, blocked, board_id) VALUES (?, ?, ?, ?, ?)";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, card.getNome());
@@ -40,10 +40,10 @@ public class CardDAO {
             while (rs.next()) {
                 Card card = new Card(
                     rs.getInt("id"),
-                    rs.getString("nome"),
-                    rs.getString("descricao"),
+                    rs.getString("name"),
+                    rs.getString("description"),
                     rs.getString("status"),
-                    rs.getBoolean("bloqueado"),
+                    rs.getBoolean("blocked"),
                     rs.getInt("board_id")
                 );
                 cards.add(card);
@@ -61,7 +61,7 @@ public class CardDAO {
     }
 
     public void moverCard(int cardId, int novoBoardId) throws SQLException {
-        String sqlVerifica = "SELECT bloqueado FROM CARDS WHERE id = ?";
+        String sqlVerifica = "SELECT blocked FROM CARDS WHERE id = ?";
         String sqlMover = "UPDATE CARDS SET board_id = ? WHERE id = ?";
 
         try (PreparedStatement verifica = connection.prepareStatement(sqlVerifica)) {
@@ -69,7 +69,7 @@ public class CardDAO {
             ResultSet rs = verifica.executeQuery();
 
             if (rs.next()) {
-                boolean bloqueado = rs.getBoolean("bloqueado");
+                boolean bloqueado = rs.getBoolean("blocked");
                 if (bloqueado) {
                     System.out.println("Não é possível mover um card bloqueado.");
                     return;
@@ -91,7 +91,7 @@ public class CardDAO {
     }
 
     public void bloquearDesbloquearCard(int cardId, boolean bloquear) throws SQLException {
-        String sql = "UPDATE CARDS SET bloqueado = ? WHERE id = ?";
+        String sql = "UPDATE CARDS SET blocked = ? WHERE id = ?";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setBoolean(1, bloquear);

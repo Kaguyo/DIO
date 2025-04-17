@@ -38,17 +38,18 @@ public final class ConnectionConfig {
 
         String dbName = fullUrl.substring(fullUrl.lastIndexOf("/") + 1).split("\\?")[0];
         String baseUrl = fullUrl.substring(0, fullUrl.lastIndexOf("/"));
-
         String[] splitUrl = fullUrl.split("\\?", 2);
+
         String connectionParams = (splitUrl.length > 1) ? "?" + splitUrl[1] : "";
 
         try (Connection conn = DriverManager.getConnection(baseUrl + connectionParams, user, password);
-             Statement stmt = conn.createStatement()) {
+            Statement stmt = conn.createStatement()) {
             stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS `" + dbName + "`");
         }
 
         Connection connection = DriverManager.getConnection(baseUrl + "/" + dbName + connectionParams, user, password);
         connection.setAutoCommit(false);
+        
         return connection;
     }
 }
