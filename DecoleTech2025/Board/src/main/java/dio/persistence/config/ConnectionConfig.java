@@ -32,27 +32,21 @@ public final class ConnectionConfig {
             throw new RuntimeException("Erro ao carregar configurações do banco de dados", e);
         }
 
-        String fullUrl = props.getProperty("db.url");  // jdbc:mysql://localhost:3306/board?params
+        String fullUrl = props.getProperty("db.url");
         String user = props.getProperty("db.user");
         String password = props.getProperty("db.password");
 
-        // Extrair nome do banco e remover parâmetros
         String dbName = fullUrl.substring(fullUrl.lastIndexOf("/") + 1).split("\\?")[0];
-
-        // Remover nome do banco da URL
         String baseUrl = fullUrl.substring(0, fullUrl.lastIndexOf("/"));
 
-        // Se tiver parâmetros (como ?allowPublicKeyRetrieval), manter eles
         String[] splitUrl = fullUrl.split("\\?", 2);
         String connectionParams = (splitUrl.length > 1) ? "?" + splitUrl[1] : "";
 
-        // Conectar sem o banco e criar o banco se não existir
         try (Connection conn = DriverManager.getConnection(baseUrl + connectionParams, user, password);
              Statement stmt = conn.createStatement()) {
             stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS `" + dbName + "`");
         }
 
-        // Conectar normalmente ao banco recém-criado
         Connection connection = DriverManager.getConnection(baseUrl + "/" + dbName + connectionParams, user, password);
         connection.setAutoCommit(false);
         return connection;

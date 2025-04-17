@@ -14,7 +14,7 @@ public class CardDAO {
     }
 
     public void criarCard(Card card) throws SQLException {
-        String sql = "INSERT INTO cards (nome, descricao, status, bloqueado, board_id) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO CARDS (nome, descricao, status, bloqueado, board_id) VALUES (?, ?, ?, ?, ?)";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, card.getNome());
@@ -31,7 +31,7 @@ public class CardDAO {
 
     public List<Card> listarCardsPorBoard(int boardId) throws SQLException {
         List<Card> cards = new ArrayList<>();
-        String sql = "SELECT * FROM cards WHERE board_id = ?";
+        String sql = "SELECT * FROM CARDS WHERE board_id = ?";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, boardId);
@@ -61,8 +61,8 @@ public class CardDAO {
     }
 
     public void moverCard(int cardId, int novoBoardId) throws SQLException {
-        String sqlVerifica = "SELECT bloqueado FROM cards WHERE id = ?";
-        String sqlMover = "UPDATE cards SET board_id = ? WHERE id = ?";
+        String sqlVerifica = "SELECT bloqueado FROM CARDS WHERE id = ?";
+        String sqlMover = "UPDATE CARDS SET board_id = ? WHERE id = ?";
 
         try (PreparedStatement verifica = connection.prepareStatement(sqlVerifica)) {
             verifica.setInt(1, cardId);
@@ -91,7 +91,7 @@ public class CardDAO {
     }
 
     public void bloquearDesbloquearCard(int cardId, boolean bloquear) throws SQLException {
-        String sql = "UPDATE cards SET bloqueado = ? WHERE id = ?";
+        String sql = "UPDATE CARDS SET bloqueado = ? WHERE id = ?";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setBoolean(1, bloquear);
