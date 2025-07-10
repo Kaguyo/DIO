@@ -1,5 +1,8 @@
 const p = require("./services/products");
 const config = require("./services/config");
+const dbSet = require("./services/database");
+const { createUser } = require("./services/database");
+createUser({ name : "João" });
 
 async function main() {
     console.log("carrinho compra:");
