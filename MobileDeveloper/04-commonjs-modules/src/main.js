@@ -1,4 +1,4 @@
-const p = require("./services/products");
+const p = require("./services/products").default;
 const config = require("./services/config");
 const dbSet = require("./services/database");
 const { createUser } = require("./services/database");
