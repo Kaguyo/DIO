@@ -1,9 +1,5 @@
+import { getBaseEmail} from "./services/emails";
 
-function main() {
-    const greeting: string = "Hello, TypeScript!";
-    console.log(greeting);  
-}
-
-main();
-
-// npx tsc --init
+getBaseEmail("Gabriel").then(email => {
+    console.log(email);
+});
