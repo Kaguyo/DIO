@@ -316,9 +316,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 1519.8370205073566,
-			"y": -930.8865909341067,
-			"lastActivityTimestamp": 1757342263760,
+			"x": 1163.7018941044935,
+			"y": -725.8390939142766,
+			"lastActivityTimestamp": 1757342280959,
 			"meta": {}
 		},
 		{
@@ -1995,7 +1995,7 @@
 		},
 		{
 			"x": -522.6586665793398,
-			"y": 1447.8221228946263,
+			"y": 1231.9826523474367,
 			"z": 0.9266145783853433,
 			"meta": {},
 			"id": "camera:page:page",
@@ -4197,7 +4197,7 @@
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:jUcZpb2iJ8M8ixzqCjW4a"
+				"shape:gq8sxHPk5KfP6gHggSbMl"
 			],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
@@ -7118,6 +7118,165 @@
 			},
 			"parentId": "page:page",
 			"index": "a53Tg",
+			"typeName": "shape"
+		},
+		{
+			"x": 961.8919891428711,
+			"y": -875.0455952117421,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:gq8sxHPk5KfP6gHggSbMl",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 390.859375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "const cluster = require('node:cluster');"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "const dgram = require('node:dgram');"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "if (cluster.isPrimary) {"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  cluster.fork(); // Works ok."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  cluster.fork(); // Fails with EADDRINUSE."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "} else {"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  const s = dgram.createSocket('udp4');"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  s.bind(1234, () => {"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    s.addMembership('224.0.0.114');"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  });"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "}"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "axAE2",
 			"typeName": "shape"
 		},
 		{
