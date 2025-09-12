@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 766.4665702105228,
-			"y": 1160.9282780919755,
-			"lastActivityTimestamp": 1757681459662,
+			"x": 591.450439986711,
+			"y": 1708.3233498716033,
+			"lastActivityTimestamp": 1757683975896,
 			"meta": {}
 		},
 		{
@@ -572,9 +572,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 903.6662396621787,
-			"y": -521.7416471530404,
-			"z": 0.4364922332467469,
+			"x": -58.136981020618634,
+			"y": -1500.983047187391,
+			"z": 0.9356598668396365,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -937,10 +937,10 @@
 			"typeName": "shape"
 		},
 		{
-			"editingShapeId": null,
+			"editingShapeId": "shape:pNY3uimjIswEzA8_-MlYa",
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:Nj8F10qXRPwdTH_rWlZgF"
+				"shape:pNY3uimjIswEzA8_-MlYa"
 			],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
@@ -963,7 +963,7 @@
 			"props": {
 				"color": "black",
 				"size": "m",
-				"w": 122.734375,
+				"w": 131.40699559199973,
 				"font": "draw",
 				"textAlign": "start",
 				"autoSize": true,
@@ -979,7 +979,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "IS thread"
+									"text": "JS thread"
 								}
 							]
 						},
@@ -999,7 +999,7 @@
 				}
 			},
 			"parentId": "page:page",
-			"index": "ag1pq",
+			"index": "b089A7",
 			"typeName": "shape"
 		},
 		{
@@ -2500,8 +2500,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 747.2471308552117,
-			"y": 966.8852751013934,
+			"x": 722.0462242590529,
+			"y": 950.8483345402016,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -2511,7 +2511,7 @@
 			"props": {
 				"color": "black",
 				"size": "m",
-				"w": 264.484375,
+				"w": 338.015625,
 				"font": "draw",
 				"textAlign": "start",
 				"autoSize": true,
@@ -2527,7 +2527,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "Traduz a estrutura"
+									"text": "Aponta a estrutura"
 								}
 							]
 						},
@@ -2551,7 +2551,31 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "sistema operacional"
+									"text": "sistema operacional, "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "transformando a abs"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "tração em instrução nativa"
 								}
 							]
 						},
@@ -3171,7 +3195,7 @@
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -3599,7 +3623,7 @@
 				}
 			},
 			"parentId": "page:page",
-			"index": "ai4tq",
+			"index": "b076EQ",
 			"typeName": "shape"
 		},
 		{
