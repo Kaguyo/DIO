@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 839.7782984902572,
-			"y": 1247.9859554241602,
-			"lastActivityTimestamp": 1757681031189,
+			"x": 766.4665702105228,
+			"y": 1160.9282780919755,
+			"lastActivityTimestamp": 1757681459662,
 			"meta": {}
 		},
 		{
@@ -861,8 +861,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 723.6417905923888,
-			"y": 1147.249335195035,
+			"x": 705.3138585224553,
+			"y": 1144.9583436862931,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -872,7 +872,7 @@
 			"props": {
 				"color": "blue",
 				"size": "m",
-				"w": 125.859375,
+				"w": 164.015625,
 				"font": "draw",
 				"textAlign": "start",
 				"autoSize": true,
@@ -888,7 +888,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "conversão"
+									"text": "Ponteamento"
 								}
 							]
 						}
@@ -940,11 +940,9 @@
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:NY39yc_g3veqm_EqtuX8j",
-				"shape:Nj8F10qXRPwdTH_rWlZgF",
-				"shape:4ihstTzqD7aO0otN8Ae9Y"
+				"shape:Nj8F10qXRPwdTH_rWlZgF"
 			],
-			"hoveredShapeId": "shape:4ihstTzqD7aO0otN8Ae9Y",
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -3173,7 +3171,7 @@
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "default",
+				"type": "move",
 				"rotation": 0
 			},
 			"isFocusMode": false,
